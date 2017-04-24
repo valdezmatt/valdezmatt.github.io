@@ -1,0 +1,40 @@
+<ul class="contact-list">
+  {% if site.email %}
+    <li>
+      <a href="mailto:{{ site.email }}">
+        <span class="icon icon--email">{% include icon-email.svg %}</span>
+        <span class="label">{{ site.data.theme.t.email | default: 'Email' }}</span>
+      </a>
+    </li>
+  {% endif %}
+
+  {% if site.orcid_username %}
+    <li>{% include icon-phone.html label="Phone: 951.215.6373" %}</li>
+    {% endif %}
+    
+  {% if site.orcid_username %}
+    <li>{% include icon-orcid.html username=site.orcid_username label='ORCiD' %}</li>
+    {% endif %}
+    
+  {% if site.linkedin_username %}
+    <li>{% include icon-linkedin.html username=site.linkedin_username label='LinkedIn' %}</li>
+  {% endif %}
+
+  {% if site.researchgate_username %}
+    <li>{% include icon-researchgate.html username=site.researchgate_username label='ResearchGate' %}</li>
+  {% endif %}
+
+  {% if site.slideshare_username %}
+    <li>{% include icon-slideshare.html username=site.slideshare_username label='Slideshare' %}</li>
+    {% endif %}
+
+    
+  <li>
+    {% if site.gems contains 'jekyll-feed' %}
+      <a href="{{ site.feed.path | default: 'feed.xml' | relative_url }}" title="Atom Feed">
+        <span class="icon icon--rss">{% include icon-rss.svg %}</span>
+        <span class="label">{{ site.data.theme.t.subscribe | default: 'Subscribe' }}</span>
+      </a>
+    {% endif %}
+  </li>
+</ul>

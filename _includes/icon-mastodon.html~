@@ -1,0 +1,4 @@
+<a href="https://mstdn.io/{{ include.username }}">
+  <span class="icon icon--orcid">{% include icon-orcid.svg %}</span>
+  <span class="label">{{ include.label | default: include.username }}</span>
+</a>

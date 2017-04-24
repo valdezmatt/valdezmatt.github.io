@@ -1,0 +1,8 @@
+---
+layout: cv
+title: Curiculum Vitae
+permalink: /cv/
+actions:
+   label: "Download"
+   url: "http://mattvaldez.co/cv"
+---
